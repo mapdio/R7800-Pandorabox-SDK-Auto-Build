@@ -18,7 +18,7 @@
 
 
 # 并入 lean插件包feeds和firewall
-git clone https://github.com/coolsnowwolf/lede
+git clone --depth 1 https://github.com/anonymous12357/lede
 cp -r lede/package/lean package/
 \cp lede/feeds.conf.default feeds.conf.default
 
@@ -39,8 +39,8 @@ sed -i 's|^TARGET_|# TARGET_|g; s|# TARGET_DEVICES += netgear_r7800|TARGET_DEVIC
 # cp -r lede/tools/ucl tools
 
 # 修改makefile
-sed  -i '/^# builddir dependencies/i\tools-y += ucl upx' ./tools/Makefile
-sed  -i '/^# builddir dependencies/a\$(curdir)/upx/compile := $(curdir)/ucl/compile' ./tools/Makefile
+# sed  -i '/^# builddir dependencies/i\tools-y += ucl upx' ./tools/Makefile
+# sed  -i '/^# builddir dependencies/a\$(curdir)/upx/compile := $(curdir)/ucl/compile' ./tools/Makefile
 
 
 # 删除重复插件
