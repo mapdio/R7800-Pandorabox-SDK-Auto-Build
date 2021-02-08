@@ -27,7 +27,6 @@ env:
   CONFIG_FILE: .config
   DIY_P1_SH: diy-part1.sh
   DIY_P2_SH: diy-part2.sh
-  FEED_CLEAN: feed-clean.sh
   DEF_SETS: zzz-default-settings
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
@@ -75,9 +74,7 @@ jobs:
     
     - name: Update feeds
       run: |
-        chmod +x $FEED_CLEAN
         cd openwrt && ./scripts/feeds update -a
-        $GITHUB_WORKSPACE/$FEED_CLEAN
     
     - name: Install feeds
       run: cd openwrt && ./scripts/feeds install -a
