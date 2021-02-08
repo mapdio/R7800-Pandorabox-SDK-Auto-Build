@@ -59,7 +59,7 @@ jobs:
       working-directory: /workdir
       run: |
         df -hT $PWD
-        wget -q $SDK_URL$SDK_FILE.tar.xz
+        wget -c ${{SDK_URL}}${{SDK_FILE}}.tar.xz
         tar xvf $SDK_FILE.tar.xz
         mv $SDK_FILE openwrt
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
