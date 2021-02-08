@@ -16,8 +16,6 @@
 # Add a feed source
 #sed -i '$a src-git lienol https://github.com/Lienol/openwrt-package' feeds.conf.default
 
-# 移除ACwifidude自带bin目录
-rm -rf bin
 
 # 并入 lean插件包feeds和firewall
 git clone https://github.com/coolsnowwolf/lede
