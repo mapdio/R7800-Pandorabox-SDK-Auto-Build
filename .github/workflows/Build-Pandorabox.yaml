@@ -21,7 +21,7 @@ on:
 
 env:
   SDK_URL: http://pandorabox.tuuz.cc:8000/pandorabox/19.06/targets/qualcomm/ipq806x/
-  SDK_FILE: ipq806x/PandoraBox-SDK-qualcomm-ipq806x_gcc-5.5.0_uClibc-1.0.x_eabi.Linux-x86_64-2019-06-02-git-988afe579
+  SDK_FILE: PandoraBox-SDK-qualcomm-ipq806x_gcc-5.5.0_uClibc-1.0.x_eabi.Linux-x86_64-2019-06-02-git-988afe579
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: .config
   DIY_P1_SH: diy-part1.sh
