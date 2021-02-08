@@ -33,9 +33,12 @@ sed -i '$a src-git OpenAppFilter https://github.com/OpenWrt-Actions/OpenAppFilte
 # URL替换
 sed -i s'/pangubox.com/pangubox.com:6380/' scripts/download.pl
 
+# 仅编译R7800固件
+sed -i 's|^TARGET_|# TARGET_|g; s|# TARGET_DEVICES += netgear_r7800|TARGET_DEVICES += netgear_r7800|' target/linux/qualcomm/image/ipq806x.mk
+
 # 添加UPX UCL工具包
-cp -r lede/tools/upx tools
-cp -r lede/tools/ucl tools
+# cp -r lede/tools/upx tools
+# cp -r lede/tools/ucl tools
 
 # 修改makefile
 sed  -i '/^# builddir dependencies/i\tools-y += ucl upx' ./tools/Makefile
