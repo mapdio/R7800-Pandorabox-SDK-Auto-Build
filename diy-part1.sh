@@ -25,7 +25,7 @@ sed -i '13,13 s/y/n/g' Config.in
 git clone -b lede-17.01 https://github.com/coolsnowwolf/openwrt.git --depth 1 lede
 cp -r lede/package/lean package/
 \cp lede/feeds.conf.default feeds.conf.default
-\cp lede/.git .git
+
 
 
 # 添加 ssr plus 和passwall 支持源
