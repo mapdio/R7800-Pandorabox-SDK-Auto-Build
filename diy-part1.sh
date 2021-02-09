@@ -19,7 +19,7 @@
 git init
 
 # 并入 lean插件包feeds和firewall
-git clone --depth 1 https://github.com/anonymous12357/lede
+git clone -b lede-17.01 https://github.com/coolsnowwolf/openwrt.git --depth 1 lede
 cp -r lede/package/lean package/
 \cp lede/feeds.conf.default feeds.conf.default
 
@@ -53,7 +53,8 @@ rm -rf package/lean/simple-obfs
 rm -rf package/lean/v2ray-plugin
 rm -rf package/lean/v2ray
 rm -rf package/lean/microsocks
-
+rm -rf package/lean/redsocks2
+rm -rf package/lean/kcptun
 
 
 # 删除lede文件夹
