@@ -17,3 +17,5 @@
 #sed -i '$a src-git lienol https://github.com/Lienol/openwrt-package' feeds.conf.default
 
 
+# URL替换
+sed -i s'/https:\/\/downloads.pangubox.com/http:\/\/downloads.pangubox.com:6380/' scripts/download.pl
