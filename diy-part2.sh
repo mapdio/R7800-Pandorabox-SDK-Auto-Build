@@ -14,5 +14,5 @@
 #sed -i 's/192.168.1.1/192.168.50.5/g' package/base-files/files/bin/config_generate
 
 # 移除feed里重复组件
-rm -rf feeds/packages/net/kcptun
-rm -rf feeds/kenzok8/redsocks2
+# rm -rf feeds/packages/net/kcptun
+# rm -rf feeds/kenzok8/redsocks2
