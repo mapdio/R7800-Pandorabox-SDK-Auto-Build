@@ -16,3 +16,4 @@
 # 移除feed里重复组件
 # rm -rf feeds/packages/net/kcptun
 # rm -rf feeds/kenzok8/redsocks2
+rm -rf feeds/packages/utils/i2c-tools
