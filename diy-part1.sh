@@ -16,14 +16,12 @@
 # Add a feed source
 #sed -i '$a src-git lienol https://github.com/Lienol/openwrt-package' feeds.conf.default
 
-git init
-git add .
-git commit -m "first commit"
 
 # 并入 lean插件包feeds和firewall
 git clone -b lede-17.01 https://github.com/coolsnowwolf/openwrt.git --depth 1 lede
 cp -r lede/package/lean package/
 \cp lede/feeds.conf.default feeds.conf.default
+\cp lede/.git .git
 
 
 # 添加 ssr plus 和passwall 支持源
