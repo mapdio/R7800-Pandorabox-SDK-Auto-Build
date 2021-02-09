@@ -17,7 +17,9 @@
 #sed -i '$a src-git lienol https://github.com/Lienol/openwrt-package' feeds.conf.default
 
 # 修改默认配置
-sed -i '1,17d' Config.in
+sed -i '5,5 s/ALL/n/g' Config.in
+sed -i '9,9 s/ALL/n/g' Config.in
+sed -i '13,13 s/y/n/g' Config.in
 
 # 并入 lean插件包feeds和firewall
 git clone -b lede-17.01 https://github.com/coolsnowwolf/openwrt.git --depth 1 lede
